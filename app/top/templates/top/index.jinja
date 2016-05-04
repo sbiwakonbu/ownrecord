@@ -1,5 +1,40 @@
 {% extends 'base.jinja' %}
+
+<!-- title -->
 {% block title %}Top{% endblock %}
+
+{% load staticfiles %}
+{% block head %}
+  {{ block.super }}
+  <link href="{% static "css/login/form.css" %}" rel="stylesheet">
+{% endblock %}
+
+<!-- content -->
 {% block content %}
-  <h1>TOP PAGE</h1>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">Own Records</h3>
+          </div>
+        </div>
+
+        <div class="inner cover">
+          <h1 class="cover-heading">Own Records</h1>
+          <div class="container">
+            {% include "login/_form.jinja" %}
+          </div>
+        </div>
+
+        <div class="mastfoot">
+          <div class="inner">
+            <p>own records by <a href="https://twitter.com/biwakonbu">@biwakonbu</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 {% endblock %}
