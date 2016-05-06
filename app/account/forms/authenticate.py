@@ -4,12 +4,12 @@ class AuthenticationForm(forms.Form):
     """
     Login form
     """
-    email = forms.EmailField(
+    username = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                'id': 'inputEmail',
+                'id': 'inputUsername',
                 'class': 'form-control',
-                'placeholder': 'Email address',
+                'placeholder': 'Username',
                 'require': True,
                 'autofocus': True,
             },
@@ -23,4 +23,4 @@ class AuthenticationForm(forms.Form):
         }))
 
     class Meta:
-        fields = ['email', 'password']
+        fields = ['username', 'password']

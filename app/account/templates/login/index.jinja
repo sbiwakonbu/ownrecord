@@ -1,5 +1,13 @@
 {% extends "base.jinja" %}
 
+{% block head %}
+  {% load staticfiles %}
+  {{ block.super }}
+  <!-- Custom styles for this template -->
+  <link href="{% static "css/cover.css" %}" rel="stylesheet">
+  <link href="{% static "css/login/form.css" %}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-{% include 'login/_form.jinja' %}
+  {% include 'login/_form.jinja' %}
 {% endblock %}

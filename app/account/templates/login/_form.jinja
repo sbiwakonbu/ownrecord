@@ -5,10 +5,10 @@
 <form class="form-signin" method="post" action="{% url 'account.views.login' %}">
   {% csrf_token %}
   <h2 class="form-signin-heading">Please sign in</h2>
-  <label for="inputEmail" class="sr-only">{{ form.email.label }}</label>
-  {{ form.email }}
+  <label for="inputEmail" class="sr-only">{{ form.username.label }}</label>
+  {{ form.username }}
   <label for="inputPassword" class="sr-only">{{ form.password.label }}</label>
   {{ form.password }}
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
+  <input type="hidden" name="next" value="{{ next }}" />
 </form>
