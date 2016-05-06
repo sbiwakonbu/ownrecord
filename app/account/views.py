@@ -18,7 +18,7 @@ def login(request, template_name='login/index.jinja'):
             if user is not None:
                 if user.is_active:
                     django_login(request, user)
-                    return redirect('/user/profile')
+                    return redirect('/profile')
     else:
         form = AuthenticationForm()
     return render(request, template_name, {

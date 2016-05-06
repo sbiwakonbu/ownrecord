@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^$', login,
         {'template_name': 'top/index.jinja'}),
     url(r'^account/', include('account.urls')),
+    url(r'^profile/', include('profile.urls')),
 ]

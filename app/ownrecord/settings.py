@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'ownrecord',
     'top',
     'account',
+    'profile',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -138,3 +139,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIR = (
     STATIC_ROOT,
 )
+
+LOGIN_URL = '/account/login/'
