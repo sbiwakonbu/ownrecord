@@ -1,13 +1,4 @@
-{% extends 'base.jinja' %}
-
-<!-- title -->
-{% block title %}Top{% endblock %}
-
-{% load staticfiles %}
-{% block head %}
-  {{ block.super }}
-  <link href="{% static "css/login/form.css" %}" rel="stylesheet">
-{% endblock %}
+{% extends 'login/index.jinja' %}
 
 <!-- content -->
 {% block content %}
@@ -24,7 +15,7 @@
         <div class="inner cover">
           <h1 class="cover-heading">Own Records</h1>
           <div class="container">
-            {% include "login/_form.jinja" %}
+            {{ block.super }}
           </div>
         </div>
 
